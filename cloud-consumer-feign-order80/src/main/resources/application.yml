@@ -1,0 +1,20 @@
+server:
+  port: 80
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+
+#设置feign客户端超时时间
+#springcloud默认feign支持ribbon
+ribbon:
+  #建立时间
+  ReadTimeout: 5000
+  #建立后从服务读取到可用资源的时间
+  ConnnectTimeout: 5000
+
+logging:
+  level:
+    #feign日志以什么级别监控哪个接口
+    com.sky.myspringcloud2020.service.PatmentService: debug

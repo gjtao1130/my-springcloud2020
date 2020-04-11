@@ -1,0 +1,19 @@
+package com.sky.myspringcloud2020;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
+@SpringBootApplication
+@EnableFeignClients
+@EnableHystrix
+@EnableCircuitBreaker //服务熔断
+public class CloudConsumerFeignOrder80Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(CloudConsumerFeignOrder80Application.class, args);
+    }
+
+}
