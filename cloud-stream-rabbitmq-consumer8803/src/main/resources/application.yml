@@ -1,10 +1,10 @@
 server:
-  port: 8801
+  port: 8803
 
 
 spring:
   application:
-    name: cloud-stream-consumer
+    name: cloud-stream-provider
   cloud:
     stream:
       binders:  #此处配置要绑定的rabbitmq的服务信息
@@ -18,11 +18,11 @@ spring:
                 username: guest
                 password: guest
       bindings: #服务的整合处理
-        output: #这个名字是一个通道的名称
+        input: #这个名字是一个通道的名称
           destination: studyExchange #表示要使用Exchage名称定义
           content-type: application/json #设置消息类型，本次用json，文本用：text/plain
           binder: defaultRabbit #设置要绑定的消息服务的具体设置
-
+          group: sky  #分组号，stream消息rqbbitmq分组号，用于解决消息重复消费(不设置的话生成默认分组，分组流水号不同，分组号不同的组，消息可以重复消费)以及消息持久化()
 
 eureka:
   client:
@@ -31,5 +31,5 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 2 #设置心跳的时间间隔（默认30秒）
     lease-expiration-duration-in-seconds: 10 #如果现在超过了10秒的时间间隔（默认90秒）
-    instance-id: send-8801 #在信息列表时显示主机名称
+    instance-id: send-8803 #在信息列表时显示主机名称
     prefer-ip-address: true #访问路径变为IP地址
