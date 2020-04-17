@@ -47,6 +47,7 @@
         <module>cloud-stream-rabbitmq-consumer8803</module>
 
         <module>cloud-alibaba-provider-payment8901</module>
+        <module>cloud-alibaba-consumer80</module>
     </modules>
 
     <dependencies>

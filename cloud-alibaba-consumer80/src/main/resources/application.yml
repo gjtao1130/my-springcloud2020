@@ -1,9 +1,9 @@
 server:
-  port: 8901
+  port: 80
 
 spring:
   application:
-    name: nacos-payment-provider
+    name: nacos-order-consumer
     cloud:
       nacos:
         discovery:
@@ -16,9 +16,6 @@ spring:
     #  - nacosRegistration: defined by method 'nacosRegistration' in class path resource [com/alibaba/cloud/nacos/registry/NacosServiceRegistryAutoConfiguration.class]
     #  - eurekaRegistration: defined in BeanDefinition defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.class]
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+server-url:
+  nacos-user-service: http://nacos-payment-provider
 
