@@ -1,0 +1,26 @@
+server:
+  port: 8901
+
+spring:
+  application:
+    name: nacos-payment-provider
+    cloud:
+      nacos:
+        discovery:
+          server-addr: localhost:8848 #设置nacos地址
+  #autoconfigure:
+    #exclude: org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration
+    #exclude: org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationAutoConfiguration
+    #配置是忽略了eureka注册中心,否则报错：
+    #Field registration in org.springframework.cloud.client.serviceregistry.ServiceRegistryAutoConfiguration$ServiceRegistryEndpointConfiguration required a single bean, but 2 were found:
+    #  - nacosRegistration: defined by method 'nacosRegistration' in class path resource [com/alibaba/cloud/nacos/registry/NacosServiceRegistryAutoConfiguration.class]
+    #  - eurekaRegistration: defined in BeanDefinition defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.class]
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
