@@ -6,10 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class CloudAlibabaNacosConsumer80Application {
+public class CloudAlibabaConsumer80Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(CloudAlibabaNacosConsumer80Application.class, args);
+        SpringApplication.run(CloudAlibabaConsumer80Application.class, args);
     }
 
 }
