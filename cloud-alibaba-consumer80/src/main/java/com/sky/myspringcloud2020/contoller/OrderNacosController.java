@@ -46,7 +46,7 @@ public class OrderNacosController {
     //方法参数、返回值要与原函数保持一致
     public String handleFlowQpsEception(String id, BlockException e){
         e.printStackTrace();
-        return "handleFlowQpsEception: "+ id;
+        return "handleFlowQpsEception: "+ id + " MSG："+e.getMessage();
     }
 
     //getSentinelInfo抛出的异常提供fallback处理

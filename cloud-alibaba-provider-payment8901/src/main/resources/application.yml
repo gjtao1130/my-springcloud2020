@@ -8,7 +8,7 @@ spring:
       nacos:
         discovery:
           server-addr: localhost:8848 #设置nacos地址
-  #autoconfigure:
+    #autoconfigure:
     #exclude: org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration
     #exclude: org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationAutoConfiguration
     #配置是忽略了eureka注册中心,否则报错：
