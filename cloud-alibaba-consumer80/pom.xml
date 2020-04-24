@@ -10,9 +10,9 @@
     </parent>
 
     <groupId>com.sky.my-springcloud2020</groupId>
-    <artifactId>cloud-alibaba-nacos-consumer80</artifactId>
+    <artifactId>cloud-alibaba-consumer80</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cloud-alibaba-nacos-consumer80</name>
+    <name>cloud-alibaba-consumer80</name>
     <description>Demo project for Spring Boot</description>
 
 
