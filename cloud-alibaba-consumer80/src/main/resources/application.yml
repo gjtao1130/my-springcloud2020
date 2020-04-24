@@ -8,6 +8,10 @@ spring:
       nacos:
         discovery:
           server-addr: localhost:8848 #设置nacos地址
+    sentinel:
+      transport:
+        dashboard: localhost:8080  #配置sentenel dashboard地址
+        port: 8179  #默认8179，若被占用则会从8179开始依次+1扫描，直到找到未占用的端口
   #autoconfigure:
     #exclude: org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration
     #exclude: org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationAutoConfiguration

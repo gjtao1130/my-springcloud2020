@@ -10,9 +10,9 @@
     </parent>
 
     <groupId>com.sky.my-springcloud2020</groupId>
-    <artifactId>cloud-alibaba-nacos-provider-payment8901</artifactId>
+    <artifactId>cloud-alibaba-nacos-consumer80</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cloud-alibaba-nacos-provider-payment8901</name>
+    <name>cloud-alibaba-nacos-consumer80</name>
     <description>Demo project for Spring Boot</description>
 
 
@@ -24,6 +24,10 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
 
         <dependency>
